@@ -3,69 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oreia Modas | O seu estilo em Jales</title>
+    <title>Oreia Modas | Loja Exclusiva</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-gradient {
-            background: radial-gradient(circle at center, #1f1f1f 0%, #000000 100%);
-        }
-        .float-animation { animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    </style>
 </head>
-<body class="bg-black text-white font-sans selection:bg-orange-500">
+<body class="bg-black text-white font-sans">
 
-    <nav class="fixed w-full z-50 p-6 flex justify-between items-center backdrop-blur-lg bg-black/50 border-b border-zinc-800">
-        <div class="flex items-center gap-3">
-            <img src="logo.jpg" class="w-10 h-10 rounded-full border border-orange-500 object-cover">
-            <span class="font-black tracking-tight text-lg">OREIA MODAS</span>
-        </div>
-        <a href="https://wa.me/5517997557816" class="bg-white text-black font-black px-6 py-2 rounded-full text-xs hover:bg-orange-500 transition-all">WHATSAPP</a>
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-zinc-800">
+        <h1 class="font-black italic text-xl">OREIA MODAS</h1>
+        <a href="https://wa.me/5517997557816" class="bg-orange-500 text-black px-4 py-2 rounded-lg font-black text-xs hover:scale-105 transition-transform">ZAP</a>
     </nav>
 
-    <section id="home" class="hero-gradient h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
-        <div class="float-animation mb-8">
-            <div class="w-32 h-32 bg-zinc-800 rounded-full flex items-center justify-center border-4 border-orange-500/20">
-                <i class="fas fa-crown text-4xl text-orange-500"></i>
-            </div>
-        </div>
-        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-tight mb-4">
-            Vista <span class="text-orange-500">Poder</span>
-        </h1>
-        <p class="text-zinc-400 text-lg md:text-xl max-w-md mb-8">A moda que define a sua atitude. Qualidade premium, peças exclusivas e atendimento de elite em Jales.</p>
-        <div class="flex gap-4">
-            <a href="#vitrine" class="bg-orange-500 text-black px-8 py-4 rounded-xl font-black hover:scale-105 transition-transform">VER VITRINE</a>
-        </div>
+    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-6">
+        <h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-4">ESTILO &<br><span class="text-orange-500">ATITUDE</span></h2>
+        <p class="text-zinc-400 mb-8 max-w-sm">A sua nova referência de moda em Jales-SP.</p>
     </section>
 
-    <section id="vitrine" class="py-24 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-black uppercase mb-12 text-center text-zinc-500">Lançamentos Exclusivos</h2>
+    <section id="vitrine" class="py-12 px-6 max-w-5xl mx-auto">
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
-                <img src="kit1.jpg" class="w-full h-96 object-cover rounded-xl grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
-                <img src="kit2.jpg" class="w-full h-96 object-cover rounded-xl grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
-                <img src="kit3.jpg" class="w-full h-96 object-cover rounded-xl grayscale hover:grayscale-0 transition-all">
-            </div>
+            <button onclick="openModal('Kit Balenciaga')" class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
+                <img src="kit1.jpg" class="w-full h-80 object-cover rounded-xl">
+            </button>
+            <button onclick="openModal('Kit Gucci')" class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
+                <img src="kit2.jpg" class="w-full h-80 object-cover rounded-xl">
+            </button>
+            <button onclick="openModal('Kit Nuvem')" class="bg-zinc-900 p-2 rounded-2xl hover:border border-orange-500 transition-all">
+                <img src="kit3.jpg" class="w-full h-80 object-cover rounded-xl">
+            </button>
         </div>
     </section>
 
-    <section id="local" class="py-24 bg-zinc-950 px-6 text-center">
-        <h2 class="text-4xl font-black uppercase mb-8">Onde Estamos</h2>
-        <div class="max-w-xl mx-auto bg-black p-8 rounded-3xl border border-zinc-800">
-            <p class="text-xl font-bold mb-2">Av. Francisco Jalles, 2685</p>
-            <p class="text-orange-500 font-bold mb-6 italic">Centro - Jales/SP</p>
-            <a href="https://wa.me/5517997557816" class="block w-full border border-orange-500 py-4 rounded-xl hover:bg-orange-500 hover:text-black font-black transition-all">COMO CHEGAR</a>
+    <div id="modal" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-6">
+        <div class="bg-zinc-900 p-8 rounded-3xl w-full max-w-sm border border-zinc-700 text-center">
+            <h3 id="modalTitle" class="text-2xl font-black mb-6 uppercase">Produto</h3>
+            <div class="space-y-4">
+                <a id="btnZap" href="#" class="block bg-green-600 py-4 rounded-xl font-bold hover:bg-green-500 transition-all">
+                    <i class="fab fa-whatsapp mr-2"></i> Chamar no Zap
+                </a>
+                <a id="btnInsta" href="https://instagram.com/oreia_modas" class="block bg-pink-600 py-4 rounded-xl font-bold hover:bg-pink-500 transition-all">
+                    <i class="fab fa-instagram mr-2"></i> Ver no Instagram
+                </a>
+                <button onclick="closeModal()" class="text-zinc-500 font-bold underline mt-4">Fechar</button>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="p-12 text-center text-zinc-700 font-bold tracking-widest text-xs">
-        OREIA MODAS © 2026
-    </footer>
+    <script>
+        function openModal(produto) {
+            document.getElementById('modalTitle').innerText = produto;
+            document.getElementById('btnZap').href = "https://wa.me/5517997557816?text=Olá, quero saber mais sobre o " + produto;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() { document.getElementById('modal').classList.add('hidden'); }
+    </script>
 
 </body>
 </html>
