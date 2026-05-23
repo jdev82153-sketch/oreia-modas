@@ -3,69 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oreia Modas | Loja Online</title>
+    <title>Oreia Modas | Moda Masculina</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); }
+    </style>
 </head>
-<body class="bg-[#0f0f0f] text-white">
+<body class="bg-black text-white font-sans">
 
-    <nav class="flex justify-between items-center p-6 bg-[#1a1a1a]/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="flex items-center gap-3">
-            <img src="logo.jpg" class="w-10 h-10 rounded-full object-cover border border-orange-500">
-            <span class="text-xl font-black">OREIA MODAS</span>
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" class="w-10 h-10 rounded-full border border-orange-500 object-cover">
+                <span class="text-xl font-black italic">OREIA MODAS</span>
+            </div>
+            <div class="hidden md:flex gap-6 font-bold text-sm">
+                <a href="#home" class="hover:text-orange-500">Início</a>
+                <a href="#vitrine" class="hover:text-orange-500">Vitrine</a>
+                <a href="#sobre" class="hover:text-orange-500">Sobre</a>
+                <a href="#local" class="hover:text-orange-500">Local</a>
+            </div>
+            <a href="https://wa.me/5517997557816" class="bg-orange-500 text-black px-4 py-2 rounded-lg font-black text-sm hover:scale-105 transition-transform">ZAP</a>
         </div>
-        <ul class="hidden md:flex gap-8 font-bold text-sm">
-            <li><a href="#home" class="hover:text-orange-500">Início</a></li>
-            <li><a href="#vitrine" class="hover:text-orange-500">Vitrine</a></li>
-            <li><a href="#sobre" class="hover:text-orange-500">Sobre</a></li>
-            <li><a href="#local" class="hover:text-orange-500">Loja Física</a></li>
-        </ul>
-        <a href="https://wa.me/5517997557816" class="bg-orange-500 text-black px-5 py-2 rounded-full font-black text-sm hover:bg-white transition-all">CHAMAR ZAP</a>
     </nav>
 
-    <section id="home" class="h-screen flex flex-col items-center justify-center text-center p-6">
-        <h1 class="text-6xl md:text-8xl font-black uppercase leading-none">Moda Masculina<br><span class="text-orange-500">Sem Erro</span></h1>
-        <p class="text-xl text-zinc-400 mt-6 max-w-lg">O melhor estilo da região, com preço justo e atendimento exclusivo.</p>
-        <div class="mt-10 flex gap-4">
-            <a href="#vitrine" class="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black">Ver Produtos</a>
-            <a href="#local" class="bg-white text-black px-8 py-3 rounded-full font-bold">Onde Estamos</a>
-        </div>
-    </section>
-
-    <section id="sobre" class="py-24 px-6 bg-[#1a1a1a]">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-4xl font-black uppercase mb-6">Por que escolher a <span class="text-orange-500">Oreia Modas</span>?</h2>
-                <p class="text-zinc-400 leading-relaxed mb-6">Trabalhamos com o que há de melhor no mercado. Nosso foco é entregar qualidade e estilo para quem não quer perder tempo e gosta de se vestir bem.</p>
-                <ul class="space-y-4 font-bold">
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Atendimento personalizado</li>
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Qualidade garantida</li>
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Envios para todo o Brasil</li>
-                </ul>
-            </div>
-            <div class="h-80 bg-zinc-800 rounded-3xl flex items-center justify-center">
-                <i class="fas fa-tshirt text-7xl opacity-20"></i>
-            </div>
-        </div>
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4 gradient-bg">
+        <h1 class="text-6xl md:text-8xl font-black uppercase mb-6 tracking-tighter">Moda Masculina<br><span class="text-orange-500">Sem Erro</span></h1>
+        <p class="text-zinc-400 text-lg md:text-xl max-w-lg mb-10">Qualidade premium em Jales. O estilo que você procura está aqui.</p>
+        <a href="#vitrine" class="border border-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-black transition-all">VER LANÇAMENTOS</a>
     </section>
 
     <section id="vitrine" class="py-24 px-6 max-w-6xl mx-auto">
-        <h2 class="text-4xl font-black text-center mb-16 uppercase">Vitrine de Destaques</h2>
+        <h2 class="text-4xl font-black mb-12 uppercase border-l-4 border-orange-500 pl-4">Nossa Vitrine</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-[#1a1a1a] p-4 rounded-3xl hover:border border-orange-500 transition-all"><img src="kit1.jpg" class="w-full h-80 object-cover rounded-2xl mb-4"><h3 class="font-bold text-lg">Kit Balenciaga</h3></div>
-            <div class="bg-[#1a1a1a] p-4 rounded-3xl hover:border border-orange-500 transition-all"><img src="kit2.jpg" class="w-full h-80 object-cover rounded-2xl mb-4"><h3 class="font-bold text-lg">Kit Gucci</h3></div>
-            <div class="bg-[#1a1a1a] p-4 rounded-3xl hover:border border-orange-500 transition-all"><img src="kit3.jpg" class="w-full h-80 object-cover rounded-2xl mb-4"><h3 class="font-bold text-lg">Kit Nuvem</h3></div>
+            <div class="group bg-zinc-900 p-3 rounded-3xl hover:bg-zinc-800 transition-all">
+                <img src="kit1.jpg" class="w-full h-96 object-cover rounded-2xl mb-4">
+                <h3 class="font-bold text-lg px-2">Kit Balenciaga</h3>
+            </div>
+            <div class="group bg-zinc-900 p-3 rounded-3xl hover:bg-zinc-800 transition-all">
+                <img src="kit2.jpg" class="w-full h-96 object-cover rounded-2xl mb-4">
+                <h3 class="font-bold text-lg px-2">Kit Gucci</h3>
+            </div>
+            <div class="group bg-zinc-900 p-3 rounded-3xl hover:bg-zinc-800 transition-all">
+                <img src="kit3.jpg" class="w-full h-96 object-cover rounded-2xl mb-4">
+                <h3 class="font-bold text-lg px-2">Kit Nuvem</h3>
+            </div>
         </div>
     </section>
 
-    <section id="local" class="py-24 px-6 bg-orange-500 text-black text-center">
-        <h2 class="text-4xl font-black uppercase mb-8">Nossa Loja Física</h2>
-        <p class="text-xl font-bold mb-4">Av. Francisco Jalles, 2685 - Jales/SP</p>
-        <p class="font-black text-2xl">Venha nos fazer uma visita!</p>
+    <section id="sobre" class="py-24 bg-zinc-900 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-8 uppercase">A Oreia Modas</h2>
+            <p class="text-zinc-400 text-lg leading-relaxed">Referência em moda masculina em Jales-SP. Nosso compromisso é entregar peças de alta qualidade, conforto e aquele estilo que destaca você na multidão. Não vendemos apenas roupas, vendemos atitude.</p>
+        </div>
     </section>
 
-    <footer class="p-12 text-center text-zinc-600">
-        <p>&copy; 2026 Oreia Modas - Referência em moda masculina.</p>
+    <section id="local" class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto bg-orange-500 text-black p-12 rounded-3xl">
+            <i class="fas fa-map-marker-alt text-5xl mb-6"></i>
+            <h2 class="text-4xl font-black mb-4 uppercase">Visite a nossa loja</h2>
+            <p class="text-xl font-bold mb-8">Av. Francisco Jalles, 2685 - Centro, Jales - SP</p>
+            <a href="https://wa.me/5517997557816" class="bg-black text-white px-8 py-4 rounded-full font-black hover:bg-zinc-800 transition-all">FALAR COM VENDEDOR</a>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-zinc-600 border-t border-zinc-800">
+        <p class="font-bold mb-2">OREIA MODAS © 2026</p>
+        <p class="text-xs">Desenvolvido com foco em estilo.</p>
     </footer>
 
 </body>
